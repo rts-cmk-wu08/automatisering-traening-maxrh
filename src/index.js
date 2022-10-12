@@ -1,7 +1,17 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // slå dig løs her... 
+import "./index.scss"
 
-    //eksempel på at udskrive alle overskrifter i services i konsollen:
-    //services.forEach(service => console.log(service.headline))
+import advSection from "./components/advantages/advSection.js"
+import sitesSection from "./components/sites/sitesSection.js"
+import facilitySection from "./components/facilities/facilitySection.js"
+import servicesSection from "./components/services/servicesSection.js"
+import heroSection from "./components/hero/heroSection.js"
 
-}) // DOMContentLoaded slut
+
+let element = document.querySelector(".main")
+
+// element.append(hero())
+element.append(heroSection())
+element.append(servicesSection())
+element.append(facilitySection())
+element.append(sitesSection())
+element.append(advSection())
