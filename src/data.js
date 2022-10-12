@@ -27,6 +27,7 @@ export let services = [
     },
 ]
 
+
 export let facilities = {
     headline: "Making your facility known is our priority",
     options : [
@@ -57,7 +58,7 @@ export let sites = {
     headline: "Join the community campervan sites managers.",
     text: "Discover all the equibbed areas in Italy. Find the shop with all the services for you and your camper.",
     btnicon: "https://dazzling-squirrel-77a63d.netlify.app/imgs/icons/arrow-icon.png",
-    places: [
+    options: [
         {
             img: "https://dazzling-squirrel-77a63d.netlify.app/imgs/lucciano.png",
             name: "Lucciano",
@@ -76,7 +77,9 @@ export let sites = {
     ]
 }
 
-export let advantages = [
+export let advantages = {
+    headline: "Our Advantages",
+    options : [
     {
         icon:"https://dazzling-squirrel-77a63d.netlify.app/imgs/icons/compare.png",
         headline: "Convenience and Transparency",
@@ -92,4 +95,5 @@ export let advantages = [
         headline: "Community of services dedicated to campers",
         text: "You don’t have to find out later or only after camenierk and trarsparent Easyamper ratains pliacas and beautias of your tariaary and halpin a fixed commission on each transaction of 5"
     },
-]
+    ]
+}
