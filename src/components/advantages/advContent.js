@@ -10,6 +10,12 @@ let advContent = function() {
         .then(response => response.json())
         .then((advantages) => {
 
+            let section = document.querySelector(".section-advantages")
+            let sectionTitle = document.createElement("h1")
+            sectionTitle.classList.add("section-headline")
+            sectionTitle.innerText = advantages.headline
+            section.prepend(sectionTitle)
+
             advantages.options.forEach(advantage => {
                 element.append(advArticle(advantage))
             })

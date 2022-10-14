@@ -1,12 +1,12 @@
-let heroArticle = function(item) {
+let heroArticle = function(hero) {
 
     let element = document.createElement('article')
-    element.classList.add('services-article')
+    element.classList.add('hero')
 
     element.innerHTML = `
-        <img class="services-article__icon"src="${item.image}" alt=""/>
-        <h4 class="services-article__headline">${item.headline}</h4>
-        <p class="services-article__description">${item.copy}</p>
+        <img class="hero__img" src="${hero.image}" alt="${hero.headline}"/>
+        <h4 class="hero__headline">${hero.headline}</h4>
+        <p class="hero__description">${hero.copy}</p>
     `
 
     return element

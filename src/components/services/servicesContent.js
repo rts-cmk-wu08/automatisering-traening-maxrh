@@ -5,9 +5,14 @@ let servicesContent = function(items) {
     let element = document.createElement('div')
     element.classList.add("wrap")
 
-    items.forEach(item => {
-        element.append(servicesArticle(item))
-    })
+    fetch("http://localhost:4000/services")
+        .then(response => response.json())
+        .then((services) => {
+
+            services.forEach(service => {
+                element.append(servicesArticle(service))
+            })
+        })
 
     return element
 }

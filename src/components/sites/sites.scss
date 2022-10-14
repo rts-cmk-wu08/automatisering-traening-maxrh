@@ -1,0 +1,21 @@
+@import '../../variables';
+
+.section-sites {
+    &__headline {
+        margin-bottom: calc($spacer * 1) ;
+    }
+
+    .section-intro {
+        margin: 0 15px;
+        padding-right: 25px;
+
+        max-width: calc(33% - 0px);
+    }
+
+    .sites-article__img {
+        object-fit: cover;
+        height: 300px;
+    }
+
+
+}
