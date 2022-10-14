@@ -5,19 +5,22 @@ let sitesContent = function(items) {
     let element = document.createElement('div')
     element.classList.add("wrap")
 
-    element.innerHTML = `
-        <div class="section-intro">
-            <h1 class="section-headline">${items.headline}</h1>
-            <p>${items.text}</p>
-            <button class="btn" href="#"><img class="btn-icon"src="${items.btnicon}"/> Start</button>
+    fetch("http://localhost:4000/sites")
+        .then(response => response.json())
+        .then((sites) => {
 
-        </div>
-    `
+            element.innerHTML = `
+                <div class="sites-intro">
+                    <h1 class="sites-info__headline">${sites.headline}</h1>
+                    <p class="sites-info__description">${sites.text}</p>
+                    <button class="btn" href="#"><img class="btn-icon"src="${sites.btnicon}"/> Start</button>
+                </div>
+            `
 
-
-    items.options.forEach(item => {
-        element.append(sitesArticle(item))
-    })
+            sites.options.forEach(site => {
+                element.append(sitesArticle(site))
+            })
+        })
 
     return element
 }
