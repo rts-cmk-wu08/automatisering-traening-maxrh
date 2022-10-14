@@ -1,3 +1,4 @@
+@import '/src/components/hero/hero';
 @import '/src/components/sites/sites';
 @import '/src/components/services/services';
 @import '/node_modules/bulma/sass/utilities/_all';
@@ -9,7 +10,7 @@
 }
 
 body {
-    margin: 30px;
+    margin:             $body-margin;
     font-family:        $font-base;
     color:              $body-color;
     background-color:   $body-bg;
@@ -62,7 +63,7 @@ img {
     margin-bottom: calc($spacer * 8);
 
     &__title {
-        margin-bottom: calc($spacer * 5);
+        margin-bottom: calc($spacer * 4);
     }
 }
 

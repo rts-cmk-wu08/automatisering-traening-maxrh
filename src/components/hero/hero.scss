@@ -1,0 +1,20 @@
+@import '../../variables';
+
+
+.hero {
+    position: relative;
+    margin-top: -($body-margin);
+    margin-left: -($body-margin);
+    margin-right: -($body-margin);
+
+    &__box {
+        max-width: 50%;
+        position: relative;
+        left: $body-margin;
+        margin-top: -140px;
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
