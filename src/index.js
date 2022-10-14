@@ -7,11 +7,14 @@ import servicesSection from "./components/services/servicesSection.js"
 import heroSection from "./components/hero/heroSection.js"
 
 
-let element = document.querySelector(".main")
+let wrapperElm = document.querySelector(".wrapper")
+// let mainElm = document.createElement("div")
+// mainElm.classList.add("main")
+// wrapperElm.append(mainELm)
 
 // element.append(hero())
-element.append(heroSection())
-element.append(servicesSection())
-element.append(facilitySection())
-element.append(sitesSection())
-element.append(advSection())
+wrapperElm.append(heroSection())
+wrapperElm.append(servicesSection())
+wrapperElm.append(facilitySection())
+wrapperElm.append(sitesSection())
+wrapperElm.append(advSection())

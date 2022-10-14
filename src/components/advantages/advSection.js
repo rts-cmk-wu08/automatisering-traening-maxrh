@@ -1,4 +1,3 @@
-import { advantages } from "../../data.js"
 import advContent from "./advContent.js"
 
 let advSection = function() {
@@ -7,13 +6,17 @@ let advSection = function() {
     element.classList.add("advantages")
 
     element.innerHTML = `
-            <h1 class="section-headline">${advantages.headline}</h1>
+            <h1 class="section-headline"></h1>
         `
 
-    element.append(advContent(advantages))
+
+   
+
+    element.append(advContent())
 
     return element
 
+   
 }
 
 export default advSection

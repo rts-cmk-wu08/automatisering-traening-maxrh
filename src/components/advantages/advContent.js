@@ -1,13 +1,20 @@
 import advArticle from "./advArticle.js"
+// import "./advSection.scss"
 
-let advContent = function(items) {
+let advContent = function() {
 
     let element = document.createElement('div')
     element.classList.add("wrap")
+   
+    fetch("http://localhost:4000/advantages")
+        .then(response => response.json())
+        .then((advantages) => {
 
-    items.options.forEach(item => {
-        element.append(advArticle(item))
-    })
+            advantages.options.forEach(advantage => {
+                element.append(advArticle(advantage))
+            })
+
+        })
 
     return element
 }
