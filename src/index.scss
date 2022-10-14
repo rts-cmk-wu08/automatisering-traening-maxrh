@@ -1,6 +1,7 @@
 @import '/src/components/sites/sites';
 @import '/src/components/services/services';
-
+@import '/node_modules/bulma/sass/utilities/_all';
+@import '/node_modules/bulma/sass/elements/_all';
 @import 'variables';
 
 * {
@@ -28,9 +29,9 @@ h1, h2, h3, h4, h5, h6 {
 h1 { font-size: $h1-font-size; }
 h2 { font-size: $h2-font-size; }
 h3 { font-size: $h3-font-size; }
-h4 { font-size: $h4-font-size; }
-h5 { font-size: $h5-font-size; }
-h6 { font-size: $h6-font-size; }
+h4 { font-size: $h4-font-size; line-height: $line-height-base; }
+h5 { font-size: $h5-font-size; line-height: $line-height-base; }
+h6 { font-size: $h6-font-size; line-height: $line-height-base; }
 
 p {
     margin-top: 0;
@@ -41,19 +42,17 @@ img {
     max-width: 100%;
 }
 
-.btn {
-    background-color: $red;
-    border: none;
-    appearance: none;
-    color: $white;
-    display: flex;
-    align-items: center;
-    padding: 15px 50px;
+.button {
+    font-family: $font-base;
     font-weight: $font-weight-bold;
     font-size: $font-size-base;
 
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+
     img {
-        transform: translate(-6px, -1px);
+        transform: translate(-8px, 0px);
+        margin-right: -5px;
     }
 }
 
@@ -64,7 +63,6 @@ img {
 
     &__title {
         margin-bottom: calc($spacer * 5);
-        line-height: $line-height-sm;
     }
 }
 

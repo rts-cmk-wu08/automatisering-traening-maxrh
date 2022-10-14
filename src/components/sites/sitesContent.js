@@ -13,7 +13,7 @@ let sitesContent = function(items) {
                 <div class="flex-start">
                     <h1 class="section__title">${sites.headline}</h1>
                     <p class="section__desc">${sites.text}</p>
-                    <button class="btn" href="#"><img class="btn-icon"src="${sites.btnicon}"/> Start</button>
+                    <button class="button is-primary is-medium" href="#"><img class="btn-icon"src="${sites.btnicon}"/> Start</button>
                 </div>
             `
 
