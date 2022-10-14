@@ -1,0 +1,12 @@
+@import '../../variables';
+
+.services {
+
+    .card {
+        &__img {
+            max-width: 180px;
+        }
+
+  
+    }
+}

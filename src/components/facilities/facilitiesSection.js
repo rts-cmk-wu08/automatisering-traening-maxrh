@@ -3,7 +3,8 @@ import facilitiesContent from "./facilitiesContent.js"
 let facilitiesSection = function() {
 
     let element = document.createElement('section')
-    element.classList.add("section-facilities")
+    element.setAttribute('id', 'facilities')
+    element.classList.add("section")
 
     element.append(facilitiesContent())
 

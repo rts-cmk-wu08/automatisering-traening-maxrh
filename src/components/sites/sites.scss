@@ -1,21 +1,20 @@
 @import '../../variables';
 
-.section-sites {
-    &__headline {
+.sites {
+
+    .section__title {
         margin-bottom: calc($spacer * 1) ;
     }
 
-    .section-intro {
-        margin: 0 15px;
-        padding-right: 25px;
+    .card {
+        &__img {
+            object-fit: cover;
+            height: 300px;
+            margin-bottom: .5em;
+        }
 
-        max-width: calc(33% - 0px);
+        &__title {
+            margin-bottom: .25rem;
+        }
     }
-
-    .sites-article__img {
-        object-fit: cover;
-        height: 300px;
-    }
-
-
 }

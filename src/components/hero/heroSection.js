@@ -2,8 +2,9 @@ import heroContent from "./heroContent.js"
 
 let heroSection = function() {
 
-    let element = document.createElement('section')
-    element.classList.add("section-hero")
+    const element = document.createElement('section')
+    element.setAttribute('id', 'hero')
+    element.classList.add("section")
 
     element.append(heroContent())
 

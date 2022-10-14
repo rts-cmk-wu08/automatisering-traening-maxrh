@@ -1,12 +1,12 @@
 let sitesArticle = function(site) {
 
     let element = document.createElement('article')
-    element.classList.add('sites')
+    element.classList.add('card', 'flex__item')
     
     element.innerHTML = `
-        <img class="sites__img"src="${site.img}" alt="${site.name}"/>
-        <h4 class="sites__headline">${site.name}</h4>
-        <p class="sites__description">${site.city}</p>
+        <img class="card__img" src="${site.img}" alt="${site.name}"/>
+        <h4 class="card__title">${site.name}</h4>
+        <p class="card__desc">${site.city}</p>
     `
     
     return element

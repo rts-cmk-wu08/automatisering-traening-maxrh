@@ -1,12 +1,12 @@
 let facilitiesArticle = function(facility) {
 
     let element = document.createElement('article')
-    element.classList.add('adv-article')
+    element.classList.add('card', 'flex__item')
 
     element.innerHTML = `
-        <img class="adv-article__icon"src="${facility.icon}" alt=""/>
-        <h4 class="adv-article__headline">${facility.headline}</h4>
-        <p class="adv-article__description">${facility.text}</p>
+        <img class="card__icon" src="${facility.icon}" alt=""/>
+        <h4 class="card__title">${facility.headline}</h4>
+        <p class="card__desc">${facility.text}</p>
     `
 
     return element

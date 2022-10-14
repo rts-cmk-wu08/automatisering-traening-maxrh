@@ -3,7 +3,7 @@ import servicesArticle from "./servicesArticle.js"
 let servicesContent = function(items) {
 
     let element = document.createElement('div')
-    element.classList.add("wrap")
+    element.classList.add("services", "flex")
 
     fetch("http://localhost:4000/services")
         .then(response => response.json())
