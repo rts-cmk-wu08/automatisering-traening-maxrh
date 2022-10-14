@@ -7,12 +7,12 @@ import servicesSection from "./components/services/servicesSection.js"
 import heroSection from "./components/hero/heroSection.js"
 
 
-const wrapperElm = document.querySelector(".wrapper")
+const mainElm = document.querySelector(".main")
 
-wrapperElm.append(heroSection())
-wrapperElm.append(servicesSection())
-wrapperElm.append(facilitiesSection())
-wrapperElm.append(sitesSection())
-wrapperElm.append(advSection())
+mainElm.append(heroSection())
+mainElm.append(servicesSection())
+mainElm.append(facilitiesSection())
+mainElm.append(sitesSection())
+mainElm.append(advSection())
 
 
