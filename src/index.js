@@ -6,8 +6,7 @@ import facilitiesSection from "./components/facilities/facilitiesSection.js"
 import servicesSection from "./components/services/servicesSection.js"
 import heroSection from "./components/hero/heroSection.js"
 
-
-const mainElm = document.querySelector(".main")
+const mainElm = document.getElementById("main")
 
 mainElm.append(heroSection())
 mainElm.append(servicesSection())
