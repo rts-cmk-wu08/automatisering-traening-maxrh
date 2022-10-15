@@ -8,10 +8,12 @@
         position: relative;
         
 
-        margin-top: -12vw;
+        margin-top: -10vw;
+
+        transition: all ease-in-out 1s;
 
         @include from($tablet) {
-            max-width: 40%;
+            max-width: 600px;
         }
 
         p:last-child {
