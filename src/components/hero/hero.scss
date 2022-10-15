@@ -1,6 +1,3 @@
-@import '../../variables';
-
-
 .hero {
     position: relative;
     margin-top: -($body-margin);
@@ -8,13 +5,27 @@
     margin-right: -($body-margin);
 
     &__box {
-        max-width: 50%;
         position: relative;
-        left: $body-margin;
-        margin-top: -140px;
+        
+
+        margin-top: -12vw;
+
+        @include from($tablet) {
+            max-width: 40%;
+        }
 
         p:last-child {
             margin-bottom: 0;
         }
     }
+
+    @include until($fullhd) {
+        .container {
+
+            margin-left:  $body-margin;
+            margin-right:  $body-margin;
+        }
+      }
+
+    
 }

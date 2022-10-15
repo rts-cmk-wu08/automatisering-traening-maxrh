@@ -4,7 +4,7 @@ let sitesSection = function() {
 
     let element = document.createElement('section')
     element.setAttribute('id', 'sites')
-    element.classList.add("section")
+    element.classList.add("section", "container", "is-fullhd")
   
     element.append(sitesContent())
 

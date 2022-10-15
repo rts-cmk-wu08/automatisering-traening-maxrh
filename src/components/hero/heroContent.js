@@ -9,9 +9,11 @@ let heroContent = function() {
 
             element.innerHTML = `
                 <img class="hero__img" src="${hero.image}" alt="${hero.headline}"/>
-                <div class="hero__box box">
-                    <h4 class="hero__headline">${hero.headline}</h4>
-                    <p class="hero__description">${hero.copy}</p>
+                <div class="container is-fullhd">
+                    <div class="hero__box box">
+                        <h4 class="hero__headline">${hero.headline}</h4>
+                        <p class="hero__description">${hero.copy}</p>
+                    </div>
                 </div>
             `
             

@@ -1,9 +1,15 @@
+@import 'variables';
+@import '/node_modules/bulma/sass/utilities/_all';
+@import '/node_modules/bulma/sass/elements/_all';
+
+/*  Components Styles */
+
 @import '/src/components/hero/hero';
 @import '/src/components/sites/sites';
 @import '/src/components/services/services';
-@import '/node_modules/bulma/sass/utilities/_all';
-@import '/node_modules/bulma/sass/elements/_all';
-@import 'variables';
+
+
+/*  Global Styles */
 
 * {
     box-sizing: border-box;
@@ -60,7 +66,7 @@ img {
 /* Sections */
 
 .section {
-    margin-bottom: calc($spacer * 8);
+    margin-bottom: 14vw;
 
     &__title {
         margin-bottom: calc($spacer * 4);
@@ -75,12 +81,19 @@ img {
 .flex {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+
+    flex-wrap: wrap;
     margin: 0 $grid-wrapper-width;
+
+   
+    
+    transition: all ease-in-out 1s;
 
     &__item {
         margin: 0 $grid-gutter-width;
-        flex: 1 0 100px;
+        flex: 1 0 170px;
+
+        transition: all ease-in-out 1s;
     }
 }
 
@@ -93,9 +106,16 @@ img {
 /* Cards */
 
 .card {
+
+    @include until($tablet) {
+        margin-bottom: calc($spacer * 3);
+    }
+
     &__img,
     &__icon {
-        margin-bottom: 2.5em;
+        margin-bottom: calc($spacer * 1.5);
+        transition: all ease-in-out 1s;
+
     }
 
     &__desc {

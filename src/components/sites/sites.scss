@@ -1,7 +1,4 @@
-@import '../../variables';
-
 .sites {
-
     .section__title {
         margin-bottom: $spacer;
     }
@@ -11,6 +8,7 @@
             object-fit: cover;
             height: 300px;
             margin-bottom: .5em;
+            width: 100%;
         }
 
         &__title {
@@ -18,3 +16,17 @@
         }
     }
 }
+
+
+@include touch {
+    .sites.flex {
+        flex-wrap: wrap;
+    }
+
+    .sites .flex-start {
+        width: 100%;
+        max-width: 100%;
+        flex: none;
+        margin-bottom: calc($spacer * 4);
+    }
+  }

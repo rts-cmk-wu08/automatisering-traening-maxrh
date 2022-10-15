@@ -4,7 +4,7 @@ let facilitiesSection = function() {
 
     let element = document.createElement('section')
     element.setAttribute('id', 'facilities')
-    element.classList.add("section")
+    element.classList.add("section", "container", "is-fullhd")
 
     element.append(facilitiesContent())
 

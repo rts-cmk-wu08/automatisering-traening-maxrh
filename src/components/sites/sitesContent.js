@@ -16,7 +16,7 @@ let sitesContent = function(items) {
                     <button class="button is-primary is-medium" href="#"><img class="btn-icon"src="${sites.btnicon}"/> Start</button>
                 </div>
             `
-
+        
             sites.options.forEach(site => {
                 element.append(sitesArticle(site))
             })
