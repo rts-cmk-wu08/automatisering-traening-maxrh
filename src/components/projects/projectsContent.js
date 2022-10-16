@@ -20,45 +20,41 @@ let projectsContent = function() {
     var baseUrl = 'https://cryptic-genre-365612.appspot.com/api/projects'
     var url = 'https://cryptic-genre-365612.appspot.com/api/projects?populate=*&pagination[page]=1&pagination[pageSize]=' + pageSize + '&sort=updatedAt%3Adesc'
 
+    function sendRequest() {
+        fetch(url)
+            .then(response => response.json())
+            .then(entries => {
+                
+                elementInner.innerHTML = ``
+
+                entries.data.forEach(entry => {
+                    let entryAtt = Object.keys(entry.attributes).reduce((accumulator, key) => {
+                        accumulator[key.toLowerCase()] = entry.attributes[key];
+                        return accumulator;
+                    }, {});
+
+                    elementInner.append(projectsArticle(entryAtt))
+                })
+            })
+    }
+    sendRequest()
+
 
     btn.onclick = function() {
         fetch(baseUrl)
             .then(response => response.json())
-            .then((data) => { 
+            .then(entries => { 
 
-            var pagesTotal = data.meta.pagination.total / pageSize
-
-            pageNum < pagesTotal ? pageNum++ : pageNum = 1
-        
-            url = 'https://cryptic-genre-365612.appspot.com/api/projects?populate=*&pagination[page]=' + pageNum + '&pagination[pageSize]=' + pageSize + '&sort=updatedAt%3Adesc';
-
-        sendRequest();
-
-        })
-        
-    }
-
-
-    function sendRequest() {
-        fetch(url)
-            .then(response => response.json())
-            .then((projects) => {
+                var pagesTotal = entries.meta.pagination.total / pageSize
                 
-                elementInner.innerHTML = ``
+                pageNum < pagesTotal ? pageNum++ : pageNum = 1
 
-                projects.data.forEach(project => {
-                    let projectAtt = Object.keys(project.attributes).reduce((accumulator, key) => {
-                        accumulator[key.toLowerCase()] = project.attributes[key];
-                        return accumulator;
-                    }, {});
+                url = 'https://cryptic-genre-365612.appspot.com/api/projects?populate=*&pagination[page]=' + pageNum + '&pagination[pageSize]=' + pageSize + '&sort=updatedAt%3Adesc';
 
-                    elementInner.append(projectsArticle(projectAtt))
-                })
-
-            })
-
+            sendRequest();
+        })
     }
-    sendRequest()
+
 
     return element
 }
