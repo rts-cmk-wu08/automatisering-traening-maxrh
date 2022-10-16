@@ -1,6 +1,6 @@
 import servicesArticle from "./servicesArticle.js"
 
-let servicesContent = function(items) {
+let servicesContent = function() {
 
     let element = document.createElement('div')
     element.classList.add("services", "flex")
