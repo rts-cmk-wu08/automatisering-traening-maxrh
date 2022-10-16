@@ -1,5 +1,23 @@
 .projects {
 
+    &__nav {
+        position: absolute;
+        right:0;
+        top: 20px;
+
+        outline: none;
+        border: none;
+        background: none;
+        cursor: pointer;
+        font-weight: $font-weight-medium;
+
+        &::after {
+            content: ">";
+            margin-left: 8px;
+            font-weight: $font-weight-normal;
+        }
+    }
+
     .card {
         &__img {
             height: 250px;
