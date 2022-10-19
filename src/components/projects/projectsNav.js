@@ -21,7 +21,14 @@ let projectsNav = function() {
             .then((response) => response.json())
             .then((entries) => {
 
-                
+                let item = document.createElement('li')
+                item.setAttribute("id", 'All' )
+                items.append(item)
+
+                item.innerHTML = `
+                        <a href="">All ()</a>
+                    
+                    `
 
                 entries.data.forEach(entry => {
                     let item = document.createElement('li')
