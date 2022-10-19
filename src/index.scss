@@ -1,6 +1,7 @@
 @import 'variables';
 @import '/node_modules/bulma/sass/utilities/_all';
 @import '/node_modules/bulma/sass/elements/_all';
+@import '/node_modules/bulma/sass/components/breadcrumb';
 
 /*  Components Styles */
 
@@ -48,6 +49,14 @@ p {
 
 img {
     max-width: 100%;
+}
+
+ul {
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
 }
 
 .button {
