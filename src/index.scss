@@ -4,7 +4,7 @@
 @import '/node_modules/bulma/sass/components/breadcrumb';
 
 /*  Components Styles */
-
+@import '/src/components/form/form';
 @import '/src/components/hero/hero';
 @import '/src/components/projects/projects';
 @import '/src/components/sites/sites';
@@ -59,13 +59,14 @@ a {
     text-decoration: none;
 }
 
+
+.btn,
 .button {
     font-family: $font-base;
     font-weight: $font-weight-bold;
     font-size: $font-size-base;
-
-    padding-left: 1.5em;
-    padding-right: 1.5em;
+    padding: 15px 30px;
+    cursor: pointer;
 
     img {
         transform: translate(-8px, 0px);

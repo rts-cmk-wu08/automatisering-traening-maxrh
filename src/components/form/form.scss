@@ -1,0 +1,39 @@
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    padding: 30px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0, .05);
+    border-radius: 6px;
+
+    label {
+        display: block;
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .fieldgroup {
+        display: flex;
+        margin-bottom: 15px;
+
+        &__item {
+            width: 100%;
+            margin-right: 15px; 
+            
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+   
+    input,
+    textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        outline: none;
+    }
+}
+
