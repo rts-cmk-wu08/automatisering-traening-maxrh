@@ -19,29 +19,29 @@ let contactForm = function() {
             <div class="fieldgroup">
                 <div class="fieldgroup__item">
                     <label for="adresse">Adresse:</label>
-                    <input type="text" name="adresse" id="adresse"/>
+                    <input type="text" name="adresse" id="adresse" required />
                 </div>
             </div>
             <div class="fieldgroup">
                 <div class="fieldgroup__item">
                     <label for="zip">Postnr:</label>
-                    <input type="text" inputmode="numeric" name="zip" id="zip"/>
+                    <input type="text" inputmode="numeric" name="zip" id="zip" required pattern="[0-9]{4}"/>
                 </div>
                 <div class="fieldgroup__item">
                     <label for="city">By:</label>
-                    <input type="text" name="city" id="city"/>
+                    <input type="text" name="city" id="city" required />
                 </div>
             </div>
             <div class="fieldgroup">
                 <div class="fieldgroup__item">
                     <label for="phone">Telefon:</label>
-                    <input type="phone" name="phone" id="phone" required/>
+                    <input type="phone" name="phone" id="phone" required pattern="[0-9]{8}"/>
                 </div>
             </div>
             <div class="fieldgroup">
                 <div class="fieldgroup__item">
                     <label for="email">Email:</label>
-                    <input type="email" name="email" id="email" required pattern="^[^\s@]+@[^\s@]+\.[^\s@]{2,}$"/>
+                    <input type="email" name="email" id="email" required pattern="[A-Za-z0-9-._+]+@[A-Za-z0-9.-]+\[.]+[a-zA-Z]{2,}"/>
                 </div>
             </div>
             <div class="fieldgroup">
